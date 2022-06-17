@@ -436,7 +436,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
     }
 }
 
-}  // namespace implementation
+} // namespace implementation
 }  // namespace V2_3
 }  // namespace fingerprint
 }  // namespace biometrics
