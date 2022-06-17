@@ -108,16 +108,6 @@ Return<void> BiometricsFingerprint::onFingerUp() {
     return Void();
 }
 
-Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
-    return Void();
-}
-
-Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
-    this->isCancelled = 0;
-    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
-    return Void();
-}
-
 Return<RequestStatus> BiometricsFingerprint::ErrorFilter(int32_t error) {
     switch(error) {
         case 0: return RequestStatus::SYS_OK;
@@ -436,7 +426,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
     }
 }
 
-} // namespace implementation
+}  // namespace implementation
 }  // namespace V2_3
 }  // namespace fingerprint
 }  // namespace biometrics
